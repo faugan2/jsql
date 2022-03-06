@@ -12,6 +12,25 @@
         margin:2rem;
         >table{
             width:100%;
+
+            >tbody{
+                >tr{
+                 >td{
+                     font-size: 0.8rem;
+                    &.actions{
+                        display:flex;
+                        align-items: center;
+                        justify-content:center;
+                        >button{
+                            margin-right:0.5rem;
+                            margin-left:0.5rem;
+                            border:none;
+                            background-color: transparent;
+                        }
+                    }
+                 }   
+                }
+            }
         }
     }
 }

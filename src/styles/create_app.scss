@@ -1,0 +1,47 @@
+.create_app{
+    
+    width:300px;
+    >p{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    >.line{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        >label{
+            font-size:0.8rem;
+            font-weight: bold;
+        }
+
+        >div{
+            border-bottom:1px solid gray;
+            display:flex;
+            align-items: center;
+
+            >input{
+                flex:1;
+                padding:0.5rem;
+                border:none;
+                outline:none;
+                font-size:0.8rem;
+                color:rgba(0,0,0,0.7);
+            }
+        }
+
+        >button{
+            width:50%;
+            margin:auto;
+            padding:8px 16px;
+            border:none;
+            background-color: var(--color);
+            color:whitesmoke;
+            font-weight:bold;
+            border-radius:3px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+}

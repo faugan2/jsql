@@ -10,6 +10,7 @@ import Splash from './screens/Splash';
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import Dashboard from "./screens/Dashboard";
+import AppContent from "./screens/AppContent";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
 
           <Route path="/dashboard" exact>
             <Dashboard />
+          </Route>
+          <Route path="/app-content" exact>
+            <AppContent />
           </Route>
 
         </Switch>
