@@ -1,0 +1,24 @@
+.integration{
+    width:100%;
+    min-height:calc(100vh - 60px);
+
+    >.options{
+        display:flex;
+        gap:1rem;
+        padding:1rem;
+
+        >.option{
+            display:flex;
+            align-items: center;
+            gap:0.2rem;
+            border:none;
+            padding:0.5rem;
+            background-color:transparent;
+            cursor: pointer;
+
+            >*{
+                cursor: pointer;
+            }
+        }
+    }
+}
