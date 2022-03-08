@@ -6,11 +6,14 @@ import {useState,useEffect} from "react";
 
 const Integration=({app_key})=>{
     const [index,set_index]=useState(0);
-    const set_option=(index)=>{
-        set_index(index);
+
+    useEffect(()=>{
         const options=document.querySelectorAll(".options input");
         const input=options[index];
         input.checked=true;
+    },[index])
+    const set_option=(index)=>{
+        set_index(index); 
     }
     return(
         <div className="integration">

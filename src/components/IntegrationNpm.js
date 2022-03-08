@@ -11,9 +11,12 @@ const IntegrationNpm=({app_key})=>{
             <div>
                 <pre>
                     
-                    import jsql from "jsql";<br />
+                    import jsql from "jsql";<br /><br />
 
-                    const app=jsql.init('{app_key}');
+                    const app=jsql.init('{app_key}');<br /><br />
+                    const db=app.database();<br />
+                    const auth=app.auth();<br />
+                    const storage=app.storate();<br />
 
 
                  </pre>

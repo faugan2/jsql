@@ -9,7 +9,9 @@ const IntegrationCdn=({app_key})=>{
             <div>
                 <pre>
                 &lt;script src='https://jsql.org/app/1.0.0/jsql-app.js'&gt;&lt;/script&gt;<br />
-                    
+                &lt;script src='https://jsql.org/app/1.0.0/jsql-auth.js'&gt;&lt;/script&gt;<br />
+                &lt;script src='https://jsql.org/app/1.0.0/jsql-database.js'&gt;&lt;/script&gt;<br />
+                &lt;script src='https://jsql.org/app/1.0.0/jsql-storage.js'&gt;&lt;/script&gt;<br /><br />
                     const app=jsql.init('{app_key}');
                 </pre>
             </div>

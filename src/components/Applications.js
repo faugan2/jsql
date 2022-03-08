@@ -8,7 +8,7 @@ import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import {useSelector,useDispatch} from "react-redux";
 import {setApp} from "../features/counterSlice";
 import {useHistory} from "react-router-dom";
-
+import AddIcon from '@material-ui/icons/Add';
 const moment=require("moment-timezone");
 const Applications=()=>{
 
@@ -55,7 +55,9 @@ const Applications=()=>{
     return(
         <div className="applications">
             <div className="top_applications">
-                <button onClick={e=>set_create(true)}>Create a new application</button>    
+                <button onClick={e=>set_create(true)}>
+                    <AddIcon />
+                    Create a new application</button>    
             </div>
             <div className="content">
                 <table border="1">
