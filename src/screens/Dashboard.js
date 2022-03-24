@@ -9,6 +9,7 @@ const Dashboard=()=>{
         <div className="dashboard">
             <Top />
             <Applications />
+            
         </div>
     )
 }

@@ -4,6 +4,8 @@ import "firebase/firestore";
 import "firebase/storage";
 import * as firebaseui from 'firebaseui'
 
+import init, {Jsql} from "jsql2";
+
 const firebaseConfig = {
 
   apiKey: "AIzaSyD79gtdKuoWnLw6Iy6leX6hIIJMIBKKmLc",
@@ -34,10 +36,23 @@ const auth=app.auth();
 const db=app.firestore();
 const storage=app.storage();
 
+let jsql_app;
+let jsql_auth;
+let jsql_db;
+let jsql_storage;
+
+(async ()=>{
+  await init();
+  jsql_app=new Jsql("slfjsflsjfslkfjlk");
+  jsql_auth=jsql_app.auth();
+  jsql_db=jsql_app.database();
+  jsql_storage=jsql_app.storage();
+})()
 
 
 
-export {auth,db,storage,ui};
+
+export {auth,db,storage,ui,jsql_auth,jsql_db,jsql_storage};
 
 
 

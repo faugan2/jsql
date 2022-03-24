@@ -14,7 +14,7 @@ import AppContent from "./screens/AppContent";
 
 function App() {
   return (
-    <Router>
+    <Router basename={"/jsql"}>
         <Switch>
           <Route path="/" exact>
             <Splash />

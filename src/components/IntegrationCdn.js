@@ -8,11 +8,20 @@ const IntegrationCdn=({app_key})=>{
 
             <div>
                 <pre>
-                &lt;script src='https://jsql.org/app/1.0.0/jsql-app.js'&gt;&lt;/script&gt;<br />
-                &lt;script src='https://jsql.org/app/1.0.0/jsql-auth.js'&gt;&lt;/script&gt;<br />
-                &lt;script src='https://jsql.org/app/1.0.0/jsql-database.js'&gt;&lt;/script&gt;<br />
-                &lt;script src='https://jsql.org/app/1.0.0/jsql-storage.js'&gt;&lt;/script&gt;<br /><br />
-                    const app=jsql.init('{app_key}');
+                &lt;script src='https://jsql.org/app/1.0.0/jsql-app.js'&gt;&lt;/script&gt;<br /><br />
+               
+                   
+                &lt;script type="module"&gt;<br />
+                    import init, &#123;Jsql&#125;  from "jsql2";<br /><br />
+
+                    init().then(()=&#62;&#123;<br /><br />
+                    const app=new Jsql('{app_key}');<br /><br />
+                    const db=app.database();<br />
+                    const auth=app.auth();<br />
+                    const storage=app.storate();<br /><br />
+                &#125;)<br />
+                &lt;/script&gt;
+
                 </pre>
             </div>
         </div>

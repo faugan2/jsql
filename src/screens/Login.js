@@ -17,9 +17,11 @@ const Login=()=>{
     const [email,set_email]=useState("");
     const [password,set_password]=useState("");
     const [loging,set_loging]=useState(false);
+    const [loging_google,set_loging_google]=useState(false);
     const [alerte,set_alerte]=useState("");
 
     const login_with_google=async ()=>{
+        set_loging_google(true);
         var provider=new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider).then((res)=>{
             const user_email=res.user.email;
@@ -133,6 +135,7 @@ const Login=()=>{
                     <p></p>
                </div>
                <div className="zone_google">
+                   {loging_google==true && <CircularProgress size={15} style={{color:"var(--color)"}}/> }
                     <button onClick={login_with_google}>Sing in with Google</button>
                </div>
 
